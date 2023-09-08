@@ -7,15 +7,17 @@
  */
 int main(void)
 {
-	char ch = 'a';
+	int a;
 
-	while (ch <= 'z')
+	for (a = 97; a < 123; a++)
 	{
-		if (ch == 'e' || ch == 'q')
-			ch++;
-			putchar(ch);
-			ch++;
+		if (a != 101 && a != 113)
+		{
+			putchar(a);
+		}
 	}
+
 	putchar ('\n');
+
 	return (0);
 }
