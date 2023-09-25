@@ -1,28 +1,22 @@
 #include "main.h"
 /**
  * _strspn - Entry point
- * @s: input
- * @accept: input
+ * @s: input number
+ * @accept: input pytes
  * Return: Always 0 (Success)
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int n = 0;
-	int t;
+	unsigned int x, y;
 
-	while (*s)
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		for (t = 0; accept[t]; r++)
+		for (y = 0; accept[y] != s[x]; y++)
 		{
-			if (*s == accept[t])
-			{
-				n++;
-				break;
-			}
-			else if (accept[t + 1] == '\0')
-				return (n);
+			if (accept[y] == '\0')
+				return (x);
 		}
-		s++;
 	}
-	return (n);
+	return (x);
 }
